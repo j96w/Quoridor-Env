@@ -5,7 +5,6 @@ import networkx as nx
 from board import Board
 
 class Quoridor(object):
-
     def __init__(self, pros):
         self.pros = pros
         self.err = ['', '']
