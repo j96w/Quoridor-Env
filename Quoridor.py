@@ -78,7 +78,7 @@ class Quoridor(object):
         self.record_json['total'] = self.steps
         self.record_json['result'] = winner
         self.record_json['err'] = [self.err, ' ']
-        print(self.record_json)
+        #print(self.record_json)
 
         json_out = open('result' + str(self.pros) + '.json' , 'w')
         json.dump(self.record_json, json_out)

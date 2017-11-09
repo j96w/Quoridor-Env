@@ -1,4 +1,5 @@
 import numpy as np
+import time
 
 # whether allow jumping near edges
 allow_jne = True

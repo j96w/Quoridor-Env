@@ -1,1 +1,17 @@
 Init
+wall 11 1
+blue 7 4
+wall 5 6
+blue 6 4
+wall 15 1
+blue 5 4
+wall 3 7
+blue 4 4
+wall 13 6
+blue 3 4
+wall 1 7
+blue 2 4
+wall 9 6
+blue 1 4
+wall 1 4
+blue 1 3

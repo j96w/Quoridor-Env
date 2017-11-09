@@ -66,8 +66,8 @@ def train(rank, args, shared_model, optimizer):
                 action = prob.multinomial().data
                 action.view(-1, 1)
                 log_prob = log_prob.gather(1, Variable(action))
-                
-            state, result = env.action(action.numpy()[0] - 1)
+            # print(action.numpy().tolist()[0])
+            state, result = env.action(action.numpy().tolist()[0][0] - 1)
             state = torch.from_numpy(np.array([state, ])).float()
 
 

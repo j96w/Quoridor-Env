@@ -61,7 +61,11 @@ def test(args, shared_model):
                     action = prob.max(1)[1].data.cpu()
                 else:
                     action = prob.max(1)[1].data
-                state, result = env.action(action.numpy()[0] - 1)
+                # print(action)
+                # print(action.numpy())
+                # print(action.numpy().tolist())
+                # print(action.numpy().tolist()[0][0])
+                state, result = env.action(action.numpy().tolist()[0] - 1)
                 state = torch.from_numpy(np.array([state, ])).float()
 
                 if(result == 0):
