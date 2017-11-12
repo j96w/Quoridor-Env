@@ -27,6 +27,7 @@ def train(rank, args, shared_model, optimizer):
     done = True
     episode_length = 0
     uploadtime = 0
+    before = 0
 
     while True:
         model.load_state_dict(shared_model.state_dict())
@@ -67,28 +68,35 @@ def train(rank, args, shared_model, optimizer):
                 action.view(-1, 1)
                 log_prob = log_prob.gather(1, Variable(action))
             # print(action.numpy().tolist()[0])
+            
             state, result = env.action(action.numpy().tolist()[0][0] - 1)
             state = torch.from_numpy(np.array([state, ])).float()
 
 
             if result == 0:
-                reward = 3
+                reward = 1
                 done = True
-            elif result == 1:
-                reward = -3
-                done = True
-            else:
+            elif result == 2:
                 dis0, _ = env.findPath(0)
                 dis1, _ = env.findPath(1)
-                reward = float(dis1 - dis0 + 2) / 40
+                reward = 0
+                if (action.numpy().tolist()[0][0] - 1 < 128):
+                    reward += float(dis1 - dis0 - before) / 20
+                before = dis1 - dis0
                 done = False
-
+            elif result == 1:
+                reward = -1
+                done = True
+            else:
+                reward = -2
+                done = True
 
             values.append(value)
             log_probs.append(log_prob)
             rewards.append(reward)
 
             if done:
+                before = 0
                 state, _ = env.reset()
                 state = torch.from_numpy(np.array([state, ])).float()
 

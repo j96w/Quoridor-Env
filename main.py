@@ -26,13 +26,13 @@ parser.add_argument(
     help='gpu model')
 parser.add_argument(
     '--agentload',
-    default=False,
+    default=True,
     metavar='L',
     help='load trained agent models')
 parser.add_argument(
     '--lr',
     type=float,
-    default=0.0001,
+    default=0.00001,
     metavar='LR',
     help='learning rate')
 parser.add_argument(
@@ -56,13 +56,13 @@ parser.add_argument(
 parser.add_argument(
     '--workers',
     type=int,
-    default=1,
+    default=12,
     metavar='W',
     help='how many training processes to use')
 parser.add_argument(
     '--num_steps',
     type=int,
-    default=30,
+    default=60,
     metavar='W',
     help='steps of each batch')
 parser.add_argument(

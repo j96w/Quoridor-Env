@@ -5,6 +5,7 @@ import networkx as nx
 from board import Board
 
 class Quoridor(object):
+
     def __init__(self, pros):
         self.pros = pros
         self.err = ['', '']
@@ -30,10 +31,10 @@ class Quoridor(object):
         self.record_json['step'] = []
         ins = ""
         if turn == 1:
-            res = self.step_ai()
+            result = self.step_ai()
         else:
-            res = self.nw.result()
-        return copy.deepcopy(self.state(0)), copy.deepcopy(res)
+            result = self.nw.result()
+        return copy.deepcopy(self.state(0)), copy.deepcopy(result)
 
     def state(self, id):
         length = 20
@@ -78,7 +79,7 @@ class Quoridor(object):
         self.record_json['total'] = self.steps
         self.record_json['result'] = winner
         self.record_json['err'] = [self.err, ' ']
-        #print(self.record_json)
+        # print(self.record_json)
 
         json_out = open('result' + str(self.pros) + '.json' , 'w')
         json.dump(self.record_json, json_out)
@@ -127,12 +128,12 @@ class Quoridor(object):
         return copy.deepcopy(min_dis), copy.deepcopy(min_path)
 
     def wall_pos(self, kind):
-        row = kind // 8
+        row = int(kind / 8)
         col = kind % 8
         if row % 2 == 0:
-            return row + 2, col * 2 + 3
+            return row + 1, col * 2 + 2
         else:
-            return row + 2, col * 2 + 2
+            return row + 1, col * 2 + 1
 
     def action(self, kind):
         if kind < 128:
