@@ -26,7 +26,7 @@ parser.add_argument(
     help='gpu model')
 parser.add_argument(
     '--agentload',
-    default=True,
+    default=False,
     metavar='L',
     help='load trained agent models')
 parser.add_argument(
@@ -62,7 +62,7 @@ parser.add_argument(
 parser.add_argument(
     '--num_steps',
     type=int,
-    default=60,
+    default=80,
     metavar='W',
     help='steps of each batch')
 parser.add_argument(

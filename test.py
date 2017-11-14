@@ -68,9 +68,9 @@ def test(args, shared_model):
                     action = prob.max(1)[1].data.cpu()
                 else:
                     action = prob.max(1)[1].data
-                print(state)
-                print(action)
-                print(step)
+                # print(state)
+                # print(action)
+                # print(step)
                 # print(action.numpy())
                 # print(action.numpy().tolist())
                 # print(action.numpy().tolist()[0][0])
@@ -86,7 +86,6 @@ def test(args, shared_model):
                     success_time += 1
                     reward_sum += 1
                     done = True
-                    time.sleep(10000)
                     ave_success_step += step
                     #print(state)
                 elif result == 2:
