@@ -1,140 +1,106 @@
-2017-11-14 00:31:10,723 : log_dir: logs/
-2017-11-14 00:31:10,723 : train: True
-2017-11-14 00:31:10,723 : seed: 233
-2017-11-14 00:31:10,723 : num_steps: 80
-2017-11-14 00:31:10,723 : load_model_dir: trained_models/
-2017-11-14 00:31:10,723 : agentload: False
-2017-11-14 00:31:10,723 : gpu: False
-2017-11-14 00:31:10,723 : env: quoridor
-2017-11-14 00:31:10,723 : gamma: 0.99
-2017-11-14 00:31:10,723 : save_model_dir: trained_models/
-2017-11-14 00:31:10,723 : lr: 1e-05
-2017-11-14 00:31:10,723 : tau: 1.0
-2017-11-14 00:31:10,723 : workers: 12
-2017-11-14 00:32:56,613 : Time 00h 01m 45s, success mean 0.19000, reward mean -0.66050, success step mean 1.42105, fail step mean 2.49383, step_time 0.00000, wall_time 2.29000
-2017-11-14 00:34:23,716 : Time 00h 03m 12s, success mean 0.00000, reward mean -1.02700, success step mean 0.00000, fail step mean 2.00000, step_time 0.00000, wall_time 2.00000
-2017-11-14 00:35:59,082 : Time 00h 04m 48s, success mean 0.00000, reward mean -1.02750, success step mean 0.00000, fail step mean 2.00000, step_time 0.00000, wall_time 2.00000
-2017-11-14 00:37:40,228 : Time 00h 06m 29s, success mean 0.15000, reward mean -0.72200, success step mean 1.00000, fail step mean 2.00000, step_time 0.00000, wall_time 1.85000
-2017-11-14 00:39:17,407 : Time 00h 08m 06s, success mean 0.26000, reward mean -0.49850, success step mean 1.00000, fail step mean 2.00000, step_time 0.00000, wall_time 1.74000
-2017-11-14 00:40:57,262 : Time 00h 09m 46s, success mean 0.10000, reward mean -0.82250, success step mean 1.00000, fail step mean 2.00000, step_time 0.00000, wall_time 1.90000
-2017-11-14 00:42:30,976 : Time 00h 11m 20s, success mean 0.19000, reward mean -0.64150, success step mean 1.00000, fail step mean 2.00000, step_time 0.00000, wall_time 1.81000
-2017-11-14 00:44:34,479 : Time 00h 13m 23s, success mean 0.15000, reward mean -0.76300, success step mean 1.00000, fail step mean 3.00000, step_time 0.00000, wall_time 2.70000
-2017-11-14 00:45:55,468 : Time 00h 14m 44s, success mean 0.03000, reward mean -0.96000, success step mean 1.00000, fail step mean 2.00000, step_time 0.00000, wall_time 1.97000
-2017-11-14 00:47:28,155 : Time 00h 16m 17s, success mean 0.09000, reward mean -0.83950, success step mean 1.00000, fail step mean 2.00000, step_time 0.00000, wall_time 1.91000
-2017-11-14 00:48:49,795 : Time 00h 17m 38s, success mean 0.08000, reward mean -0.86200, success step mean 1.00000, fail step mean 2.00000, step_time 0.00000, wall_time 1.92000
-2017-11-14 00:56:46,107 : Time 00h 25m 35s, success mean 0.18000, reward mean -0.64000, success step mean 4.11111, fail step mean 8.51220, step_time 7.72000, wall_time 0.00000
-2017-11-14 00:58:11,495 : Time 00h 27m 00s, success mean 0.00000, reward mean -1.02100, success step mean 0.00000, fail step mean 2.00000, step_time 0.00000, wall_time 2.00000
-2017-11-14 00:59:47,991 : Time 00h 28m 37s, success mean 0.00000, reward mean -1.02750, success step mean 0.00000, fail step mean 2.00000, step_time 0.00000, wall_time 2.00000
-2017-11-14 01:01:17,082 : Time 00h 30m 06s, success mean 0.00000, reward mean -1.02400, success step mean 0.00000, fail step mean 2.00000, step_time 0.00000, wall_time 2.00000
-2017-11-14 01:02:43,799 : Time 00h 31m 32s, success mean 0.00000, reward mean -1.03000, success step mean 0.00000, fail step mean 2.00000, step_time 0.00000, wall_time 2.00000
-2017-11-14 01:04:17,478 : Time 00h 33m 06s, success mean 0.01000, reward mean -1.00950, success step mean 1.00000, fail step mean 2.00000, step_time 0.00000, wall_time 1.99000
-2017-11-14 01:05:57,788 : Time 00h 34m 46s, success mean 0.00000, reward mean -1.02900, success step mean 0.00000, fail step mean 2.00000, step_time 0.00000, wall_time 2.00000
-2017-11-14 01:07:23,616 : Time 00h 36m 12s, success mean 0.01000, reward mean -1.00300, success step mean 1.00000, fail step mean 2.00000, step_time 0.00000, wall_time 1.99000
-2017-11-14 01:08:57,107 : Time 00h 37m 46s, success mean 0.00000, reward mean -1.02400, success step mean 0.00000, fail step mean 2.00000, step_time 0.00000, wall_time 2.00000
-2017-11-14 01:10:30,119 : Time 00h 39m 19s, success mean 0.00000, reward mean -1.02650, success step mean 0.00000, fail step mean 2.00000, step_time 0.00000, wall_time 2.00000
-2017-11-14 01:12:01,369 : Time 00h 40m 50s, success mean 0.00000, reward mean -1.02550, success step mean 0.00000, fail step mean 2.00000, step_time 0.00000, wall_time 2.00000
-2017-11-14 01:13:39,799 : Time 00h 42m 28s, success mean 0.00000, reward mean -1.02900, success step mean 0.00000, fail step mean 2.00000, step_time 0.00000, wall_time 2.00000
-2017-11-14 01:15:09,888 : Time 00h 43m 59s, success mean 0.00000, reward mean -1.02650, success step mean 0.00000, fail step mean 2.00000, step_time 0.00000, wall_time 2.00000
-2017-11-14 01:16:48,839 : Time 00h 45m 37s, success mean 0.00000, reward mean -1.02700, success step mean 0.00000, fail step mean 2.00000, step_time 0.00000, wall_time 2.00000
-2017-11-14 01:18:11,562 : Time 00h 47m 00s, success mean 0.00000, reward mean -1.02400, success step mean 0.00000, fail step mean 2.00000, step_time 0.00000, wall_time 2.00000
-2017-11-14 01:19:39,314 : Time 00h 48m 28s, success mean 0.00000, reward mean -1.02650, success step mean 0.00000, fail step mean 2.00000, step_time 0.00000, wall_time 2.00000
-2017-11-14 01:27:30,364 : Time 00h 56m 19s, success mean 0.22000, reward mean -0.56000, success step mean 3.40909, fail step mean 8.89744, step_time 7.69000, wall_time 0.00000
-2017-11-14 01:35:25,777 : Time 01h 04m 14s, success mean 0.26000, reward mean -0.48000, success step mean 3.96154, fail step mean 9.06757, step_time 7.74000, wall_time 0.00000
-2017-11-14 01:42:20,307 : Time 01h 11m 09s, success mean 0.29000, reward mean -0.42000, success step mean 3.82759, fail step mean 8.95775, step_time 7.47000, wall_time 0.00000
-2017-11-14 01:49:29,947 : Time 01h 18m 19s, success mean 0.24000, reward mean -0.52000, success step mean 4.12500, fail step mean 8.38158, step_time 7.36000, wall_time 0.00000
-2017-11-14 01:56:24,930 : Time 01h 25m 14s, success mean 0.29000, reward mean -0.42000, success step mean 4.06897, fail step mean 8.52113, step_time 7.23000, wall_time 0.00000
-2017-11-14 02:04:07,300 : Time 01h 32m 56s, success mean 0.20000, reward mean -0.60000, success step mean 4.65000, fail step mean 8.71250, step_time 7.90000, wall_time 0.00000
-2017-11-14 02:05:21,761 : Time 01h 34m 10s, success mean 0.00000, reward mean -1.06850, success step mean 0.00000, fail step mean 2.00000, step_time 0.00000, wall_time 2.00000
-2017-11-14 02:06:42,074 : Time 01h 35m 31s, success mean 0.00000, reward mean -1.06600, success step mean 0.00000, fail step mean 2.00000, step_time 0.00000, wall_time 2.00000
-2017-11-14 02:08:02,431 : Time 01h 36m 51s, success mean 0.00000, reward mean -1.06400, success step mean 0.00000, fail step mean 2.00000, step_time 0.00000, wall_time 2.00000
-2017-11-14 02:09:27,910 : Time 01h 38m 17s, success mean 0.00000, reward mean -1.06600, success step mean 0.00000, fail step mean 2.00000, step_time 0.00000, wall_time 2.00000
-2017-11-14 02:11:03,562 : Time 01h 39m 52s, success mean 0.00000, reward mean -1.06950, success step mean 0.00000, fail step mean 2.00000, step_time 0.00000, wall_time 2.00000
-2017-11-14 02:12:39,553 : Time 01h 41m 28s, success mean 0.00000, reward mean -1.07350, success step mean 0.00000, fail step mean 2.00000, step_time 0.00000, wall_time 2.00000
-2017-11-14 02:13:51,800 : Time 01h 42m 40s, success mean 0.00000, reward mean -1.07100, success step mean 0.00000, fail step mean 2.00000, step_time 0.00000, wall_time 2.00000
-2017-11-14 02:15:22,190 : Time 01h 44m 11s, success mean 0.00000, reward mean -1.06950, success step mean 0.00000, fail step mean 2.00000, step_time 0.00000, wall_time 2.00000
-2017-11-14 02:16:32,840 : Time 01h 45m 22s, success mean 0.00000, reward mean -1.07300, success step mean 0.00000, fail step mean 2.00000, step_time 0.00000, wall_time 2.00000
-2017-11-14 02:17:59,300 : Time 01h 46m 48s, success mean 0.00000, reward mean -1.06900, success step mean 0.00000, fail step mean 2.00000, step_time 0.00000, wall_time 2.00000
-2017-11-14 02:19:29,091 : Time 01h 48m 18s, success mean 0.00000, reward mean -1.07050, success step mean 0.00000, fail step mean 2.00000, step_time 0.00000, wall_time 2.00000
-2017-11-14 02:20:50,331 : Time 01h 49m 39s, success mean 0.00000, reward mean -1.06600, success step mean 0.00000, fail step mean 2.00000, step_time 0.00000, wall_time 2.00000
-2017-11-14 02:22:29,031 : Time 01h 51m 18s, success mean 0.00000, reward mean -1.07200, success step mean 0.00000, fail step mean 2.00000, step_time 0.00000, wall_time 2.00000
-2017-11-14 02:24:08,590 : Time 01h 52m 57s, success mean 0.14000, reward mean -0.74150, success step mean 1.00000, fail step mean 2.00000, step_time 0.00000, wall_time 1.86000
-2017-11-14 02:25:44,852 : Time 01h 54m 34s, success mean 0.00000, reward mean -1.06800, success step mean 0.00000, fail step mean 2.00000, step_time 0.00000, wall_time 2.00000
-2017-11-14 02:27:04,464 : Time 01h 55m 53s, success mean 0.00000, reward mean -1.06700, success step mean 0.00000, fail step mean 2.00000, step_time 0.00000, wall_time 2.00000
-2017-11-14 02:28:31,999 : Time 01h 57m 21s, success mean 0.00000, reward mean -1.06850, success step mean 0.00000, fail step mean 2.00000, step_time 0.00000, wall_time 2.00000
-2017-11-14 02:29:52,071 : Time 01h 58m 41s, success mean 0.00000, reward mean -1.07100, success step mean 0.00000, fail step mean 2.00000, step_time 0.00000, wall_time 2.00000
-2017-11-14 02:31:15,737 : Time 02h 00m 04s, success mean 0.00000, reward mean -1.06750, success step mean 0.00000, fail step mean 2.00000, step_time 0.00000, wall_time 2.00000
-2017-11-14 02:32:37,937 : Time 02h 01m 27s, success mean 0.00000, reward mean -1.06650, success step mean 0.00000, fail step mean 2.00000, step_time 0.00000, wall_time 2.00000
-2017-11-14 02:34:14,810 : Time 02h 03m 03s, success mean 0.08000, reward mean -0.86350, success step mean 1.00000, fail step mean 2.00000, step_time 0.00000, wall_time 1.92000
-2017-11-14 02:35:35,969 : Time 02h 04m 25s, success mean 0.00000, reward mean -1.07150, success step mean 0.00000, fail step mean 2.00000, step_time 0.00000, wall_time 2.00000
-2017-11-14 02:37:01,170 : Time 02h 05m 50s, success mean 0.00000, reward mean -1.06500, success step mean 0.00000, fail step mean 2.00000, step_time 0.00000, wall_time 2.00000
-2017-11-14 02:38:24,825 : Time 02h 07m 13s, success mean 0.00000, reward mean -1.06700, success step mean 0.00000, fail step mean 2.00000, step_time 0.00000, wall_time 2.00000
-2017-11-14 02:39:45,672 : Time 02h 08m 34s, success mean 0.00000, reward mean -1.07050, success step mean 0.00000, fail step mean 2.00000, step_time 0.00000, wall_time 2.00000
-2017-11-14 02:41:12,548 : Time 02h 10m 01s, success mean 0.00000, reward mean -1.07050, success step mean 0.00000, fail step mean 2.00000, step_time 0.00000, wall_time 2.00000
-2017-11-14 02:42:37,511 : Time 02h 11m 26s, success mean 0.00000, reward mean -1.07450, success step mean 0.00000, fail step mean 2.00000, step_time 0.00000, wall_time 2.00000
-2017-11-14 02:44:13,724 : Time 02h 13m 02s, success mean 0.00000, reward mean -1.06850, success step mean 0.00000, fail step mean 2.00000, step_time 0.00000, wall_time 2.00000
-2017-11-14 02:45:41,832 : Time 02h 14m 30s, success mean 0.00000, reward mean -1.07050, success step mean 0.00000, fail step mean 2.00000, step_time 0.00000, wall_time 2.00000
-2017-11-14 02:47:17,696 : Time 02h 16m 06s, success mean 0.00000, reward mean -1.07050, success step mean 0.00000, fail step mean 2.00000, step_time 0.00000, wall_time 2.00000
-2017-11-14 02:48:42,840 : Time 02h 17m 32s, success mean 0.00000, reward mean -1.07200, success step mean 0.00000, fail step mean 2.00000, step_time 0.00000, wall_time 2.00000
-2017-11-14 02:50:10,737 : Time 02h 18m 59s, success mean 0.00000, reward mean -1.06950, success step mean 0.00000, fail step mean 2.00000, step_time 0.00000, wall_time 2.00000
-2017-11-14 02:51:48,149 : Time 02h 20m 37s, success mean 0.00000, reward mean -1.06650, success step mean 0.00000, fail step mean 2.00000, step_time 0.00000, wall_time 2.00000
-2017-11-14 02:59:04,650 : Time 02h 27m 53s, success mean 0.23000, reward mean -0.54000, success step mean 4.52174, fail step mean 8.70130, step_time 7.74000, wall_time 0.00000
-2017-11-14 03:06:37,413 : Time 02h 35m 26s, success mean 0.15000, reward mean -0.70000, success step mean 3.73333, fail step mean 8.37647, step_time 7.68000, wall_time 0.00000
-2017-11-14 03:14:06,596 : Time 02h 42m 55s, success mean 0.18000, reward mean -0.64000, success step mean 4.22222, fail step mean 8.08537, step_time 7.39000, wall_time 0.00000
-2017-11-14 03:21:34,299 : Time 02h 50m 23s, success mean 0.20000, reward mean -0.60000, success step mean 3.85000, fail step mean 8.56250, step_time 7.62000, wall_time 0.00000
-2017-11-14 03:29:08,464 : Time 02h 57m 57s, success mean 0.23000, reward mean -0.54000, success step mean 4.56522, fail step mean 8.11688, step_time 7.30000, wall_time 0.00000
-2017-11-14 03:35:15,358 : Time 03h 04m 04s, success mean 0.27000, reward mean -0.46000, success step mean 4.77778, fail step mean 8.21918, step_time 7.29000, wall_time 0.00000
-2017-11-14 03:42:37,412 : Time 03h 11m 26s, success mean 0.24000, reward mean -0.52000, success step mean 4.54167, fail step mean 8.00000, step_time 7.17000, wall_time 0.00000
-2017-11-14 03:49:46,770 : Time 03h 18m 35s, success mean 0.19000, reward mean -0.62000, success step mean 4.42105, fail step mean 8.20988, step_time 7.49000, wall_time 0.00000
-2017-11-14 03:57:20,806 : Time 03h 26m 09s, success mean 0.20000, reward mean -0.60000, success step mean 4.70000, fail step mean 8.25000, step_time 7.54000, wall_time 0.00000
-2017-11-14 04:05:44,523 : Time 03h 34m 33s, success mean 0.17000, reward mean -0.66000, success step mean 4.58824, fail step mean 9.09639, step_time 8.33000, wall_time 0.00000
-2017-11-14 04:13:07,651 : Time 03h 41m 56s, success mean 0.22000, reward mean -0.56000, success step mean 4.63636, fail step mean 8.80769, step_time 7.89000, wall_time 0.00000
-2017-11-14 04:20:25,520 : Time 03h 49m 14s, success mean 0.21000, reward mean -0.58000, success step mean 4.38095, fail step mean 8.78481, step_time 7.86000, wall_time 0.00000
-2017-11-14 04:27:08,051 : Time 03h 55m 57s, success mean 0.32000, reward mean -0.36000, success step mean 5.37500, fail step mean 8.97059, step_time 7.82000, wall_time 0.00000
-2017-11-14 04:33:49,481 : Time 04h 02m 38s, success mean 0.22000, reward mean -0.56000, success step mean 3.72727, fail step mean 8.51282, step_time 7.46000, wall_time 0.00000
-2017-11-14 04:41:29,853 : Time 04h 10m 19s, success mean 0.17000, reward mean -0.66000, success step mean 3.23529, fail step mean 8.48193, step_time 7.59000, wall_time 0.00000
-2017-11-14 04:49:13,820 : Time 04h 18m 02s, success mean 0.21000, reward mean -0.58000, success step mean 4.00000, fail step mean 9.05063, step_time 7.99000, wall_time 0.00000
-2017-11-14 04:56:28,736 : Time 04h 25m 17s, success mean 0.21000, reward mean -0.58000, success step mean 4.42857, fail step mean 8.50633, step_time 7.65000, wall_time 0.00000
-2017-11-14 05:03:04,791 : Time 04h 31m 53s, success mean 0.26000, reward mean -0.48000, success step mean 4.65385, fail step mean 8.39189, step_time 7.42000, wall_time 0.00000
-2017-11-14 05:10:25,562 : Time 04h 39m 14s, success mean 0.23000, reward mean -0.54000, success step mean 4.39130, fail step mean 8.41558, step_time 7.49000, wall_time 0.00000
-2017-11-14 05:17:30,523 : Time 04h 46m 19s, success mean 0.20000, reward mean -0.60000, success step mean 3.45000, fail step mean 8.90000, step_time 7.81000, wall_time 0.00000
-2017-11-14 05:23:51,900 : Time 04h 52m 41s, success mean 0.23000, reward mean -0.54000, success step mean 5.00000, fail step mean 8.80519, step_time 7.93000, wall_time 0.00000
-2017-11-14 05:31:25,989 : Time 05h 00m 15s, success mean 0.20000, reward mean -0.60000, success step mean 4.05000, fail step mean 8.82500, step_time 7.87000, wall_time 0.00000
-2017-11-14 05:39:25,959 : Time 05h 08m 15s, success mean 0.12000, reward mean -0.76000, success step mean 4.75000, fail step mean 7.94318, step_time 7.56000, wall_time 0.00000
-2017-11-14 05:46:17,957 : Time 05h 15m 07s, success mean 0.20000, reward mean -0.60000, success step mean 4.40000, fail step mean 8.80000, step_time 7.92000, wall_time 0.00000
-2017-11-14 05:53:36,780 : Time 05h 22m 25s, success mean 0.24000, reward mean -0.52000, success step mean 4.29167, fail step mean 8.61842, step_time 7.58000, wall_time 0.00000
-2017-11-14 06:01:27,111 : Time 05h 30m 16s, success mean 0.13000, reward mean -0.74000, success step mean 4.38462, fail step mean 8.80460, step_time 8.23000, wall_time 0.00000
-2017-11-14 06:08:45,590 : Time 05h 37m 34s, success mean 0.24000, reward mean -0.52000, success step mean 5.33333, fail step mean 8.78947, step_time 7.96000, wall_time 0.00000
-2017-11-14 06:16:22,537 : Time 05h 45m 11s, success mean 0.18000, reward mean -0.64000, success step mean 4.11111, fail step mean 8.76829, step_time 7.93000, wall_time 0.00000
-2017-11-14 06:23:54,449 : Time 05h 52m 43s, success mean 0.19000, reward mean -0.62000, success step mean 3.68421, fail step mean 8.59259, step_time 7.66000, wall_time 0.00000
-2017-11-14 06:31:10,182 : Time 05h 59m 59s, success mean 0.20000, reward mean -0.60000, success step mean 4.65000, fail step mean 8.55000, step_time 7.77000, wall_time 0.00000
-2017-11-14 06:38:25,044 : Time 06h 07m 14s, success mean 0.18000, reward mean -0.64000, success step mean 5.22222, fail step mean 8.80488, step_time 8.16000, wall_time 0.00000
-2017-11-14 06:45:19,243 : Time 06h 14m 08s, success mean 0.23000, reward mean -0.54000, success step mean 4.08696, fail step mean 8.92208, step_time 7.81000, wall_time 0.00000
-2017-11-14 06:52:39,115 : Time 06h 21m 28s, success mean 0.22000, reward mean -0.56000, success step mean 3.95455, fail step mean 8.46154, step_time 7.47000, wall_time 0.00000
-2017-11-14 06:59:51,935 : Time 06h 28m 41s, success mean 0.21000, reward mean -0.58000, success step mean 4.61905, fail step mean 8.98734, step_time 8.07000, wall_time 0.00000
-2017-11-14 07:06:56,575 : Time 06h 35m 45s, success mean 0.14000, reward mean -0.72000, success step mean 3.64286, fail step mean 8.67442, step_time 7.97000, wall_time 0.00000
-2017-11-14 07:14:06,002 : Time 06h 42m 55s, success mean 0.17000, reward mean -0.66000, success step mean 4.88235, fail step mean 8.06024, step_time 7.52000, wall_time 0.00000
-2017-11-14 07:21:15,664 : Time 06h 50m 04s, success mean 0.21000, reward mean -0.58000, success step mean 4.38095, fail step mean 8.96203, step_time 8.00000, wall_time 0.00000
-2017-11-14 07:28:32,054 : Time 06h 57m 21s, success mean 0.19000, reward mean -0.62000, success step mean 3.63158, fail step mean 8.83951, step_time 7.85000, wall_time 0.00000
-2017-11-14 07:34:46,211 : Time 07h 03m 35s, success mean 0.23000, reward mean -0.54000, success step mean 4.73913, fail step mean 8.48052, step_time 7.62000, wall_time 0.00000
-2017-11-14 07:42:10,203 : Time 07h 10m 59s, success mean 0.12000, reward mean -0.76000, success step mean 4.66667, fail step mean 8.38636, step_time 7.94000, wall_time 0.00000
-2017-11-14 07:49:00,992 : Time 07h 17m 50s, success mean 0.20000, reward mean -0.60000, success step mean 5.20000, fail step mean 8.91250, step_time 8.17000, wall_time 0.00000
-2017-11-14 07:55:31,054 : Time 07h 24m 20s, success mean 0.21000, reward mean -0.58000, success step mean 5.57143, fail step mean 8.30380, step_time 7.73000, wall_time 0.00000
-2017-11-14 08:02:07,681 : Time 07h 30m 56s, success mean 0.18000, reward mean -0.64000, success step mean 4.61111, fail step mean 8.06098, step_time 7.44000, wall_time 0.00000
-2017-11-14 08:08:45,150 : Time 07h 37m 34s, success mean 0.26000, reward mean -0.48000, success step mean 4.88462, fail step mean 8.62162, step_time 7.65000, wall_time 0.00000
-2017-11-14 08:15:58,434 : Time 07h 44m 47s, success mean 0.16000, reward mean -0.68000, success step mean 4.43750, fail step mean 8.21429, step_time 7.61000, wall_time 0.00000
-2017-11-14 08:22:34,923 : Time 07h 51m 24s, success mean 0.22000, reward mean -0.56000, success step mean 4.68182, fail step mean 8.32051, step_time 7.52000, wall_time 0.00000
-2017-11-14 08:29:28,315 : Time 07h 58m 17s, success mean 0.27000, reward mean -0.46000, success step mean 4.81481, fail step mean 8.75342, step_time 7.69000, wall_time 0.00000
-2017-11-14 08:35:46,343 : Time 08h 04m 35s, success mean 0.21000, reward mean -0.58000, success step mean 5.52381, fail step mean 8.35443, step_time 7.76000, wall_time 0.00000
-2017-11-14 08:42:32,313 : Time 08h 11m 21s, success mean 0.21000, reward mean -0.58000, success step mean 3.85714, fail step mean 8.41772, step_time 7.46000, wall_time 0.00000
-2017-11-14 08:48:55,416 : Time 08h 17m 44s, success mean 0.20000, reward mean -0.60000, success step mean 5.30000, fail step mean 8.52500, step_time 7.88000, wall_time 0.00000
-2017-11-14 08:56:26,061 : Time 08h 25m 15s, success mean 0.19000, reward mean -0.62000, success step mean 4.78947, fail step mean 8.41975, step_time 7.73000, wall_time 0.00000
-2017-11-14 09:03:38,952 : Time 08h 32m 28s, success mean 0.21000, reward mean -0.58000, success step mean 4.52381, fail step mean 8.30380, step_time 7.51000, wall_time 0.00000
-2017-11-14 09:10:27,660 : Time 08h 39m 16s, success mean 0.25000, reward mean -0.50000, success step mean 4.60000, fail step mean 8.89333, step_time 7.82000, wall_time 0.00000
-2017-11-14 09:17:30,420 : Time 08h 46m 19s, success mean 0.24000, reward mean -0.52000, success step mean 4.95833, fail step mean 8.73684, step_time 7.83000, wall_time 0.00000
-2017-11-14 09:24:32,628 : Time 08h 53m 21s, success mean 0.18000, reward mean -0.64000, success step mean 5.05556, fail step mean 8.92683, step_time 8.23000, wall_time 0.00000
-2017-11-14 09:31:48,005 : Time 09h 00m 37s, success mean 0.15000, reward mean -0.70000, success step mean 4.80000, fail step mean 8.50588, step_time 7.95000, wall_time 0.00000
-2017-11-14 09:38:32,560 : Time 09h 07m 21s, success mean 0.20000, reward mean -0.60000, success step mean 4.10000, fail step mean 8.27500, step_time 7.44000, wall_time 0.00000
-2017-11-14 09:45:11,410 : Time 09h 14m 00s, success mean 0.14000, reward mean -0.72000, success step mean 4.85714, fail step mean 8.18605, step_time 7.72000, wall_time 0.00000
-2017-11-14 09:52:26,987 : Time 09h 21m 16s, success mean 0.19000, reward mean -0.62000, success step mean 4.21053, fail step mean 8.39506, step_time 7.60000, wall_time 0.00000
-2017-11-14 09:58:37,059 : Time 09h 27m 26s, success mean 0.30000, reward mean -0.40000, success step mean 5.10000, fail step mean 8.55714, step_time 7.52000, wall_time 0.00000
-2017-11-14 10:06:09,409 : Time 09h 34m 58s, success mean 0.17000, reward mean -0.66000, success step mean 4.47059, fail step mean 8.20482, step_time 7.57000, wall_time 0.00000
+2017-11-15 12:23:00,938 : agentload: True
+2017-11-15 12:23:00,938 : log_dir: logs/
+2017-11-15 12:23:00,938 : gpu: False
+2017-11-15 12:23:00,938 : gamma: 0.99
+2017-11-15 12:23:00,939 : lr: 1e-05
+2017-11-15 12:23:00,939 : save_model_dir: trained_models/
+2017-11-15 12:23:00,939 : seed: 233
+2017-11-15 12:23:00,939 : env: quoridor
+2017-11-15 12:23:00,939 : train: True
+2017-11-15 12:23:00,939 : tau: 1.0
+2017-11-15 12:23:00,939 : num_steps: 30
+2017-11-15 12:23:00,939 : load_model_dir: trained_models/
+2017-11-15 12:23:00,939 : workers: 12
+2017-11-15 12:24:36,841 : Time 00h 01m 35s, success mean 0.00000, reward mean -1.00000, success step mean 0.00000, fail step mean 8.16000, step_time 8.16000, wall_time 0.00000, win 0 0 0 0 0 0
+2017-11-15 12:27:39,979 : Time 00h 04m 38s, success mean 0.11000, reward mean -0.49600, success step mean 36.00000, fail step mean 12.16854, step_time 11.99000, wall_time 2.80000, win 0 0 0 0 0 11
+2017-11-15 12:30:30,362 : Time 00h 07m 28s, success mean 0.11000, reward mean -0.52800, success step mean 36.00000, fail step mean 10.83146, step_time 10.89000, wall_time 2.71000, win 0 0 0 0 0 11
+2017-11-15 12:33:36,494 : Time 00h 10m 34s, success mean 0.14000, reward mean -0.45000, success step mean 36.00000, fail step mean 11.56977, step_time 12.32000, wall_time 2.67000, win 0 0 0 0 0 14
+2017-11-15 12:36:19,897 : Time 00h 13m 18s, success mean 0.09000, reward mean -0.60200, success step mean 36.00000, fail step mean 10.65934, step_time 10.27000, wall_time 2.67000, win 0 0 0 0 0 9
+2017-11-15 12:39:16,555 : Time 00h 16m 15s, success mean 0.07000, reward mean -0.56000, success step mean 35.99999, fail step mean 13.56989, step_time 12.39000, wall_time 2.75000, win 0 0 0 0 0 7
+2017-11-15 12:42:04,101 : Time 00h 19m 02s, success mean 0.06000, reward mean -0.63800, success step mean 35.99999, fail step mean 13.18085, step_time 11.87000, wall_time 2.68000, win 0 0 0 0 0 6
+2017-11-15 12:45:03,959 : Time 00h 22m 02s, success mean 0.22000, reward mean -0.26200, success step mean 36.00000, fail step mean 9.91026, step_time 13.21000, wall_time 2.44000, win 0 0 0 0 0 22
+2017-11-15 12:48:20,380 : Time 00h 25m 18s, success mean 0.10000, reward mean -0.56200, success step mean 36.00000, fail step mean 13.77778, step_time 13.77000, wall_time 2.23000, win 0 0 0 0 0 10
+2017-11-15 12:51:12,669 : Time 00h 28m 11s, success mean 0.16000, reward mean -0.45400, success step mean 36.00000, fail step mean 10.30952, step_time 12.29000, wall_time 2.13000, win 0 0 0 0 0 16
+2017-11-15 12:54:54,310 : Time 00h 31m 52s, success mean 0.17000, reward mean -0.40800, success step mean 36.00000, fail step mean 15.79518, step_time 17.34000, wall_time 1.89000, win 0 0 0 0 0 17
+2017-11-15 12:58:47,636 : Time 00h 35m 46s, success mean 0.30000, reward mean -0.15200, success step mean 34.20000, fail step mean 16.80000, step_time 20.36000, wall_time 1.66000, win 0 9 0 0 0 21
+2017-11-15 13:02:38,444 : Time 00h 39m 36s, success mean 0.25000, reward mean -0.29000, success step mean 34.08000, fail step mean 17.69333, step_time 20.24000, wall_time 1.55000, win 0 8 0 0 0 17
+2017-11-15 13:06:10,743 : Time 00h 43m 09s, success mean 0.21000, reward mean -0.36000, success step mean 34.38095, fail step mean 17.01266, step_time 18.88000, wall_time 1.78000, win 0 13 0 0 1 7
+2017-11-15 13:10:14,033 : Time 00h 47m 12s, success mean 0.36000, reward mean -0.01400, success step mean 33.33333, fail step mean 17.76562, step_time 21.67000, wall_time 1.70000, win 0 16 0 0 0 20
+2017-11-15 13:14:07,328 : Time 00h 51m 05s, success mean 0.24000, reward mean -0.23000, success step mean 31.50000, fail step mean 17.17105, step_time 18.61000, wall_time 2.00000, win 0 13 0 0 1 10
+2017-11-15 13:18:31,406 : Time 00h 55m 29s, success mean 0.13000, reward mean -0.40600, success step mean 34.00000, fail step mean 19.83908, step_time 19.23000, wall_time 2.45000, win 0 0 0 0 0 13
+2017-11-15 13:22:11,873 : Time 00h 59m 10s, success mean 0.08000, reward mean -0.49600, success step mean 34.00000, fail step mean 16.95652, step_time 15.35000, wall_time 2.97000, win 0 0 0 0 1 7
+2017-11-15 13:26:16,842 : Time 01h 03m 15s, success mean 0.22000, reward mean -0.16800, success step mean 25.04545, fail step mean 14.96154, step_time 13.65000, wall_time 3.53000, win 0 0 0 0 1 21
+2017-11-15 13:30:04,202 : Time 01h 07m 02s, success mean 0.09000, reward mean -0.58400, success step mean 34.33333, fail step mean 16.01099, step_time 15.12000, wall_time 2.54000, win 0 0 0 0 1 8
+2017-11-15 13:34:13,358 : Time 01h 11m 11s, success mean 0.25000, reward mean -0.06200, success step mean 25.76000, fail step mean 16.49333, step_time 15.36000, wall_time 3.45000, win 0 0 0 0 1 24
+2017-11-15 13:37:55,325 : Time 01h 14m 53s, success mean 0.10000, reward mean -0.43400, success step mean 34.00000, fail step mean 16.10000, step_time 14.68000, wall_time 3.21000, win 0 0 0 0 0 10
+2017-11-15 13:41:00,491 : Time 01h 17m 58s, success mean 0.10000, reward mean -0.32800, success step mean 21.50000, fail step mean 14.14444, step_time 10.52000, wall_time 4.36000, win 0 0 0 0 3 7
+2017-11-15 13:44:43,071 : Time 01h 21m 41s, success mean 0.11000, reward mean -0.46800, success step mean 33.45454, fail step mean 16.00000, step_time 14.95000, wall_time 2.97000, win 0 0 0 0 1 10
+2017-11-15 13:49:00,367 : Time 01h 25m 58s, success mean 0.16000, reward mean -0.31800, success step mean 35.56250, fail step mean 20.57143, step_time 20.71000, wall_time 2.26000, win 0 0 0 0 3 13
+2017-11-15 13:52:55,688 : Time 01h 29m 54s, success mean 0.12000, reward mean -0.28000, success step mean 34.33333, fail step mean 18.40909, step_time 16.51000, wall_time 3.81000, win 0 0 0 0 3 9
+2017-11-15 13:57:07,618 : Time 01h 34m 06s, success mean 0.16000, reward mean -0.16400, success step mean 34.00000, fail step mean 21.28571, step_time 19.13000, wall_time 4.19000, win 0 0 0 0 6 10
+2017-11-15 14:01:28,666 : Time 01h 38m 27s, success mean 0.11000, reward mean -0.21800, success step mean 34.00000, fail step mean 20.20225, step_time 17.49000, wall_time 4.23000, win 0 0 0 0 0 11
+2017-11-15 14:05:18,988 : Time 01h 42m 17s, success mean 0.09000, reward mean -0.50600, success step mean 34.44444, fail step mean 17.58242, step_time 15.79000, wall_time 3.31000, win 0 0 0 0 2 7
+2017-11-15 14:09:29,667 : Time 01h 46m 28s, success mean 0.13000, reward mean -0.17000, success step mean 36.30769, fail step mean 20.28736, step_time 18.25000, wall_time 4.12000, win 0 0 0 0 1 12
+2017-11-15 14:13:12,959 : Time 01h 50m 11s, success mean 0.14000, reward mean -0.13400, success step mean 35.28571, fail step mean 17.98837, step_time 16.63000, wall_time 3.78000, win 0 0 0 0 5 9
+2017-11-15 14:17:14,790 : Time 01h 54m 13s, success mean 0.15000, reward mean -0.00200, success step mean 36.66666, fail step mean 19.18824, step_time 17.36000, wall_time 4.45000, win 0 0 0 0 4 11
+2017-11-15 14:21:23,714 : Time 01h 58m 22s, success mean 0.26000, reward mean 0.45400, success step mean 24.23077, fail step mean 22.64865, step_time 18.52000, wall_time 4.54000, win 0 0 7 12 0 7
+2017-11-15 14:25:55,123 : Time 02h 02m 53s, success mean 0.31000, reward mean 0.21600, success step mean 32.32258, fail step mean 21.81159, step_time 20.68000, wall_time 4.39000, win 0 0 0 0 5 26
+2017-11-15 14:29:55,092 : Time 02h 06m 53s, success mean 0.14000, reward mean -0.11000, success step mean 33.78571, fail step mean 17.55814, step_time 15.09000, wall_time 4.74000, win 0 0 0 0 3 11
+2017-11-15 14:34:02,136 : Time 02h 11m 00s, success mean 0.31000, reward mean 0.51200, success step mean 27.80645, fail step mean 21.76812, step_time 18.32000, wall_time 5.32000, win 0 0 0 10 0 21
+2017-11-15 14:37:57,985 : Time 02h 14m 56s, success mean 0.15000, reward mean -0.03800, success step mean 33.06666, fail step mean 18.16471, step_time 14.17000, wall_time 6.23000, win 0 0 0 0 1 14
+2017-11-15 14:41:33,527 : Time 02h 18m 32s, success mean 0.26000, reward mean 0.28600, success step mean 21.80769, fail step mean 16.72973, step_time 12.53000, wall_time 5.52000, win 0 0 0 0 5 21
+2017-11-15 14:45:10,164 : Time 02h 22m 08s, success mean 0.08000, reward mean -0.05800, success step mean 34.50000, fail step mean 17.08696, step_time 13.49000, wall_time 4.99000, win 0 0 0 0 1 7
+2017-11-15 14:49:25,084 : Time 02h 26m 23s, success mean 0.13000, reward mean -0.10400, success step mean 36.30769, fail step mean 21.48276, step_time 19.57000, wall_time 3.84000, win 0 0 0 0 1 12
+2017-11-15 14:53:01,515 : Time 02h 30m 00s, success mean 0.16000, reward mean 0.21400, success step mean 32.12500, fail step mean 17.90476, step_time 14.46000, wall_time 5.72000, win 0 0 0 0 3 13
+2017-11-15 14:57:35,855 : Time 02h 34m 34s, success mean 0.21000, reward mean 0.56600, success step mean 33.00000, fail step mean 24.11392, step_time 20.25000, wall_time 5.73000, win 0 0 0 0 3 18
+2017-11-15 15:02:09,337 : Time 02h 39m 07s, success mean 0.37000, reward mean 0.52200, success step mean 29.10811, fail step mean 22.73016, step_time 20.90000, wall_time 4.19000, win 0 10 0 0 6 21
+2017-11-15 15:06:07,348 : Time 02h 43m 05s, success mean 0.10000, reward mean 0.34000, success step mean 33.20000, fail step mean 19.33333, step_time 14.49000, wall_time 6.23000, win 0 0 0 0 1 9
+2017-11-15 15:10:28,532 : Time 02h 47m 27s, success mean 0.36000, reward mean 0.91800, success step mean 27.19444, fail step mean 20.82812, step_time 17.67000, wall_time 5.45000, win 0 0 11 5 1 19
+2017-11-15 15:13:57,132 : Time 02h 50m 55s, success mean 0.17000, reward mean 0.55800, success step mean 20.29412, fail step mean 16.55422, step_time 11.32000, wall_time 5.87000, win 0 0 0 0 7 10
+2017-11-15 15:17:55,355 : Time 02h 54m 53s, success mean 0.16000, reward mean 0.53200, success step mean 33.56250, fail step mean 19.27381, step_time 15.73000, wall_time 5.83000, win 0 0 0 0 4 12
+2017-11-15 15:22:09,043 : Time 02h 59m 07s, success mean 0.15000, reward mean 0.56400, success step mean 33.53333, fail step mean 22.08235, step_time 18.32000, wall_time 5.48000, win 0 0 0 0 4 11
+2017-11-15 15:26:10,061 : Time 03h 03m 08s, success mean 0.41000, reward mean 0.86200, success step mean 27.19512, fail step mean 21.64407, step_time 19.48000, wall_time 4.44000, win 0 0 11 7 3 20
+2017-11-15 15:30:34,386 : Time 03h 07m 32s, success mean 0.55000, reward mean 1.35400, success step mean 25.01818, fail step mean 24.22222, step_time 19.52000, wall_time 5.14000, win 0 0 12 21 1 21
+2017-11-15 15:34:31,658 : Time 03h 11m 30s, success mean 0.15000, reward mean 0.45000, success step mean 17.33333, fail step mean 19.90588, step_time 12.83000, wall_time 6.69000, win 0 0 0 0 2 13
+2017-11-15 15:38:17,341 : Time 03h 15m 15s, success mean 0.48000, reward mean 1.51800, success step mean 21.41667, fail step mean 19.88462, step_time 13.89000, wall_time 6.73000, win 0 11 9 24 4 0
+2017-11-15 15:42:16,353 : Time 03h 19m 14s, success mean 0.33000, reward mean 0.89000, success step mean 25.27273, fail step mean 20.13433, step_time 16.24000, wall_time 5.59000, win 0 0 10 7 2 14
+2017-11-15 15:46:19,938 : Time 03h 23m 18s, success mean 0.27000, reward mean 0.81800, success step mean 20.14815, fail step mean 22.23288, step_time 15.15000, wall_time 6.52000, win 0 0 0 9 6 12
+2017-11-15 15:50:00,082 : Time 03h 26m 58s, success mean 0.38000, reward mean 0.95800, success step mean 18.50000, fail step mean 17.40323, step_time 11.76000, wall_time 6.06000, win 0 10 0 11 4 13
+2017-11-15 15:54:14,444 : Time 03h 31m 12s, success mean 0.46000, reward mean 1.26400, success step mean 21.58696, fail step mean 27.90741, step_time 18.90000, wall_time 6.10000, win 0 0 12 10 6 18
+2017-11-15 15:58:56,214 : Time 03h 35m 54s, success mean 0.46000, reward mean 1.42200, success step mean 26.76087, fail step mean 26.25926, step_time 20.79000, wall_time 5.70000, win 0 0 9 13 1 23
+2017-11-15 16:03:17,183 : Time 03h 40m 15s, success mean 0.39000, reward mean 1.47000, success step mean 27.25641, fail step mean 24.52459, step_time 18.61000, wall_time 6.98000, win 0 17 9 3 0 10
+2017-11-15 16:07:56,988 : Time 03h 44m 55s, success mean 0.41000, reward mean 1.42000, success step mean 23.97561, fail step mean 29.16949, step_time 20.69000, wall_time 6.35000, win 0 10 0 0 5 26
+2017-11-15 16:12:29,823 : Time 03h 49m 28s, success mean 0.42000, reward mean 1.46800, success step mean 26.14286, fail step mean 26.17241, step_time 20.28000, wall_time 5.88000, win 0 0 8 13 6 15
+2017-11-15 16:16:55,773 : Time 03h 53m 54s, success mean 0.40000, reward mean 1.30000, success step mean 21.52500, fail step mean 26.81667, step_time 18.93000, wall_time 5.77000, win 0 0 13 5 5 17
+2017-11-15 16:21:23,408 : Time 03h 58m 21s, success mean 0.42000, reward mean 1.37000, success step mean 23.52381, fail step mean 27.62069, step_time 19.97000, wall_time 5.93000, win 0 0 11 7 7 17
+2017-11-15 16:25:44,164 : Time 04h 02m 42s, success mean 0.35000, reward mean 1.30400, success step mean 20.40000, fail step mean 27.33846, step_time 19.03000, wall_time 5.88000, win 0 0 11 15 4 5
+2017-11-15 16:30:04,701 : Time 04h 07m 03s, success mean 0.26000, reward mean 1.17000, success step mean 22.00000, fail step mean 28.74324, step_time 20.67000, wall_time 6.32000, win 0 0 0 0 7 19
+2017-11-15 16:34:21,168 : Time 04h 11m 19s, success mean 0.44000, reward mean 1.51400, success step mean 25.70454, fail step mean 29.58929, step_time 21.68000, wall_time 6.20000, win 0 13 0 0 4 27
+2017-11-15 16:38:47,797 : Time 04h 15m 46s, success mean 0.42000, reward mean 1.54600, success step mean 22.28571, fail step mean 31.01724, step_time 21.20000, wall_time 6.15000, win 0 0 0 14 6 22
+2017-11-15 16:43:16,253 : Time 04h 20m 14s, success mean 0.23000, reward mean 1.19200, success step mean 26.60869, fail step mean 30.23377, step_time 22.79000, wall_time 6.61000, win 0 0 0 0 7 16
+2017-11-15 16:46:57,421 : Time 04h 23m 55s, success mean 0.33000, reward mean 1.46200, success step mean 23.03030, fail step mean 18.00000, step_time 12.62000, wall_time 7.04000, win 0 0 0 0 7 26
+2017-11-15 16:51:15,895 : Time 04h 28m 14s, success mean 0.35000, reward mean 1.57600, success step mean 25.37143, fail step mean 30.01538, step_time 21.84000, wall_time 6.55000, win 0 7 0 7 4 17
+2017-11-15 16:55:26,358 : Time 04h 32m 24s, success mean 0.61000, reward mean 1.98400, success step mean 23.14754, fail step mean 30.69231, step_time 19.81000, wall_time 6.28000, win 0 13 0 18 4 26
+2017-11-15 16:59:55,223 : Time 04h 36m 53s, success mean 0.30000, reward mean 1.19600, success step mean 20.30000, fail step mean 29.74286, step_time 20.71000, wall_time 6.20000, win 0 0 0 10 4 16
+2017-11-15 17:04:23,090 : Time 04h 41m 21s, success mean 0.22000, reward mean 1.33200, success step mean 29.36364, fail step mean 29.52564, step_time 22.70000, wall_time 6.79000, win 0 0 0 0 4 18
+2017-11-15 17:08:50,021 : Time 04h 45m 48s, success mean 0.35000, reward mean 1.38800, success step mean 20.17143, fail step mean 30.98461, step_time 20.70000, wall_time 6.50000, win 0 0 0 9 4 22
+2017-11-15 17:13:17,758 : Time 04h 50m 16s, success mean 0.23000, reward mean 1.22000, success step mean 20.34783, fail step mean 31.36364, step_time 22.12000, wall_time 6.71000, win 0 0 0 0 1 22
+2017-11-15 17:17:42,367 : Time 04h 54m 40s, success mean 0.45000, reward mean 1.77000, success step mean 28.66667, fail step mean 28.70909, step_time 21.76000, wall_time 6.93000, win 0 12 0 17 7 9
+2017-11-15 17:21:55,626 : Time 04h 58m 54s, success mean 0.50000, reward mean 1.71600, success step mean 24.88000, fail step mean 26.52000, step_time 18.82000, wall_time 6.88000, win 0 3 0 11 12 24
+2017-11-15 17:25:59,232 : Time 05h 02m 57s, success mean 0.49000, reward mean 1.66400, success step mean 21.95918, fail step mean 28.23529, step_time 18.99000, wall_time 6.17000, win 0 0 0 23 3 23
+2017-11-15 17:30:24,155 : Time 05h 07m 22s, success mean 0.29000, reward mean 1.17000, success step mean 23.44828, fail step mean 29.07042, step_time 21.01000, wall_time 6.43000, win 0 0 0 0 4 25
+2017-11-15 17:34:48,801 : Time 05h 11m 47s, success mean 0.30000, reward mean 1.25800, success step mean 21.13333, fail step mean 28.82857, step_time 20.66000, wall_time 5.86000, win 0 0 0 9 4 17
+2017-11-15 17:39:14,972 : Time 05h 16m 13s, success mean 0.27000, reward mean 1.06800, success step mean 23.22222, fail step mean 25.49315, step_time 18.48000, wall_time 6.40000, win 0 0 0 7 5 15
+2017-11-15 17:43:23,598 : Time 05h 20m 22s, success mean 0.42000, reward mean 1.58400, success step mean 22.52381, fail step mean 22.96552, step_time 15.87000, wall_time 6.91000, win 0 0 0 16 7 19
+2017-11-15 17:47:30,685 : Time 05h 24m 29s, success mean 0.75000, reward mean 2.45000, success step mean 25.28000, fail step mean 17.68000, step_time 16.17000, wall_time 7.21000, win 0 18 10 17 11 19
+2017-11-15 17:51:47,299 : Time 05h 28m 45s, success mean 0.35000, reward mean 1.28200, success step mean 20.85714, fail step mean 27.83077, step_time 19.45000, wall_time 5.94000, win 0 0 0 15 5 15
+2017-11-15 17:55:59,237 : Time 05h 32m 57s, success mean 0.72000, reward mean 2.28000, success step mean 24.48611, fail step mean 28.46428, step_time 18.67000, wall_time 6.93000, win 0 13 10 23 9 17
+2017-11-15 18:00:06,518 : Time 05h 37m 05s, success mean 0.66000, reward mean 2.29400, success step mean 25.03030, fail step mean 26.64706, step_time 18.52000, wall_time 7.06000, win 0 6 8 26 5 21
+2017-11-15 18:04:25,948 : Time 05h 41m 24s, success mean 0.60000, reward mean 2.00800, success step mean 27.06667, fail step mean 25.45000, step_time 19.81000, wall_time 6.61000, win 0 18 11 7 6 18
+2017-11-15 18:08:46,829 : Time 05h 45m 45s, success mean 0.77000, reward mean 2.62600, success step mean 27.87013, fail step mean 24.08696, step_time 19.81000, wall_time 7.19000, win 0 23 11 17 7 19
+2017-11-15 18:12:55,069 : Time 05h 49m 53s, success mean 0.53000, reward mean 1.92800, success step mean 24.58491, fail step mean 26.59574, step_time 18.53000, wall_time 7.00000, win 0 15 0 9 6 23
+2017-11-15 18:17:03,003 : Time 05h 54m 01s, success mean 0.42000, reward mean 1.50600, success step mean 22.33333, fail step mean 27.36207, step_time 18.98000, wall_time 6.27000, win 0 0 7 8 1 26
+2017-11-15 18:21:12,243 : Time 05h 58m 10s, success mean 0.58000, reward mean 1.99400, success step mean 24.08621, fail step mean 25.42857, step_time 17.96000, wall_time 6.69000, win 0 7 9 21 5 16
+2017-11-15 18:25:03,152 : Time 06h 02m 01s, success mean 0.46000, reward mean 1.91800, success step mean 23.08696, fail step mean 17.44444, step_time 12.33000, wall_time 7.71000, win 0 7 14 7 6 12
+2017-11-15 18:28:54,531 : Time 06h 05m 53s, success mean 0.43000, reward mean 1.84000, success step mean 25.04651, fail step mean 18.63158, step_time 13.97000, wall_time 7.42000, win 0 0 7 10 4 22
+2017-11-15 18:33:03,093 : Time 06h 10m 01s, success mean 0.53000, reward mean 1.86000, success step mean 26.26415, fail step mean 22.08511, step_time 17.79000, wall_time 6.51000, win 0 15 0 12 9 17

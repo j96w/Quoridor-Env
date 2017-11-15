@@ -20,9 +20,10 @@ def train(rank, args, shared_model, optimizer):
     torch.manual_seed(args.seed + rank)
 
     env = Quoridor(rank)
-    model = agentNET(1, 150)
+    model = agentNET(1, 129)
 
     model.train()
+    criterion = nn.CrossEntropyLoss()
 
     done = True
     episode_length = 0
@@ -32,15 +33,7 @@ def train(rank, args, shared_model, optimizer):
     while True:
         model.load_state_dict(shared_model.state_dict())
 
-        if args.gpu:
-            model = model.cuda()
-            cx = Variable(torch.zeros(1, 864).cuda())
-            hx = Variable(torch.zeros(1, 864).cuda())
-        else:
-            cx = Variable(torch.zeros(1, 864))
-            hx = Variable(torch.zeros(1, 864))
-
-        state, _ = env.reset()
+        state, _, opp_state, opp_action, _ = env.reset()
         state = torch.from_numpy(np.array([state, ])).float()
 
         values = []
@@ -48,30 +41,27 @@ def train(rank, args, shared_model, optimizer):
         rewards = []
         entropies = []
 
-        for step in range(args.num_steps):
-            if args.gpu:
-                value, logit, (hx, cx) = model((Variable(state.unsqueeze(0).cuda()),(hx, cx)))
-            else:
-                value, logit, (hx, cx) = model((Variable(state.unsqueeze(0)),(hx, cx)))
+        opp_data = []
+        if(opp_action != -1):
+            opp_data.append(copy.deepcopy([opp_state, opp_action]))
 
+        for step in range(args.num_steps):
+            value, logit = model((Variable(state.unsqueeze(0))))
             prob = F.softmax(logit)
             log_prob = F.log_softmax(logit)
             entropy = -(log_prob * prob).sum(1)
             entropies.append(entropy)
 
-            if args.gpu:
-                action = prob.multinomial().data.cpu()
-                action.view(-1, 1)
-                log_prob = log_prob.gather(1, Variable(action.cuda()))
-            else:
-                action = prob.multinomial().data
-                action.view(-1, 1)
-                log_prob = log_prob.gather(1, Variable(action))
+            action = prob.multinomial().data
+            action.view(-1, 1)
+            log_prob = log_prob.gather(1, Variable(action))
             # print(action.numpy().tolist()[0])
             
-            state, result = env.action(action.numpy().tolist()[0][0] - 1)
+            state, result, opp_state, opp_action = env.action(action.numpy().tolist()[0][0])
             state = torch.from_numpy(np.array([state, ])).float()
 
+            if(opp_action != -1):
+                opp_data.append(copy.deepcopy([opp_state, opp_action]))
 
             if result == 0:
                 reward = 1
@@ -80,8 +70,10 @@ def train(rank, args, shared_model, optimizer):
                 dis0, _ = env.findPath(0)
                 dis1, _ = env.findPath(1)
                 reward = 0
-                if (action.numpy().tolist()[0][0] - 1 < 128):
-                    reward += float(dis1 - dis0 - before) / 20
+                if (action.numpy().tolist()[0][0] < 128):
+                    ans = float(dis1 - dis0 - before) / 5
+                    if(ans > 0):
+                        reward += ans
                 before = dis1 - dis0
                 done = False
             elif result == 1:
@@ -97,23 +89,17 @@ def train(rank, args, shared_model, optimizer):
 
             if done:
                 before = 0
-                state, _ = env.reset()
+                state, _, _, _, _ = env.reset()
                 state = torch.from_numpy(np.array([state, ])).float()
 
         R = torch.zeros(1, 1)
         if not done:
-            if args.gpu:
-                value, _, _ = model((Variable(state.unsqueeze(0).cuda()), (hx, cx)))
-            else:
-                value, _, _ = model((Variable(state.unsqueeze(0)), (hx, cx)))
+            value, _ = model((Variable(state.unsqueeze(0))))
             R = value.data
 
-        if args.gpu:
-            values.append(Variable(R.cuda()))
-            R = Variable(R.cuda())
-        else:
-            values.append(Variable(R))
-            R = Variable(R)
+        
+        values.append(Variable(R))
+        R = Variable(R)
 
         policy_loss = 0
         value_loss = 0
@@ -123,32 +109,39 @@ def train(rank, args, shared_model, optimizer):
             R = args.gamma * R + rewards[i]
             advantage = R - values[i]
             value_loss = value_loss + 0.5 * advantage.pow(2)
-
-            if args.gpu:
-                delta_t = rewards[i] + args.gamma * \
-                    values[i + 1].data.cpu() - values[i].data.cpu()
-            else:
-                delta_t = rewards[i] + args.gamma * \
-                    values[i + 1].data - values[i].data
-
+            delta_t = rewards[i] + args.gamma * values[i + 1].data - values[i].data
             gae = gae * args.gamma * args.tau + delta_t
-
-            if args.gpu:
-                policy_loss = policy_loss - \
-                    log_probs[i] * Variable(gae.cuda()) - 0.01 * entropies[i]
-            else:
-                policy_loss = policy_loss - \
-                    log_probs[i] * Variable(gae) - 0.01 * entropies[i]
+            policy_loss = policy_loss - log_probs[i] * Variable(gae) - 0.01 * entropies[i]
 
 
         optimizer.zero_grad()
         (policy_loss + 0.5 * value_loss).backward()
 
-        if args.gpu:
-            model = model.cpu()
-
         torch.nn.utils.clip_grad_norm(model.parameters(), 40)
         ensure_shared_grads(model, shared_model)
         optimizer.step()
-        
-        uploadtime += 1
+
+        count = 0
+        for step in range(args.num_steps):
+            inputs = []
+            labels = []
+            optimizer.zero_grad()
+            # print(opp_data)
+            for i in range(10):
+                tmp = random.randint(0, len(opp_data) - 1)
+                inputs.append([copy.deepcopy(opp_data[tmp][0])])
+                # print(inputs)
+                # print(opp_data[tmp][0])
+                # time.sleep(20)
+                labels.append(copy.deepcopy(opp_data[tmp][1]))
+            # print(len(inputs))
+            # print(len(inputs[0]))
+            # print(len(inputs[0][0]))
+            # print(len(inputs[0][0][0]))
+            # print(len(labels))
+            # print(labels)
+            inputs, labels = Variable(torch.FloatTensor(inputs)), Variable(torch.LongTensor(labels))
+            _, outputs = model(inputs)
+            loss = criterion(outputs, labels)
+            loss.backward()
+            optimizer.step()

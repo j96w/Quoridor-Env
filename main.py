@@ -26,7 +26,7 @@ parser.add_argument(
     help='gpu model')
 parser.add_argument(
     '--agentload',
-    default=False,
+    default=True,
     metavar='L',
     help='load trained agent models')
 parser.add_argument(
@@ -62,7 +62,7 @@ parser.add_argument(
 parser.add_argument(
     '--num_steps',
     type=int,
-    default=80,
+    default=30,
     metavar='W',
     help='steps of each batch')
 parser.add_argument(
@@ -94,7 +94,7 @@ if __name__ == '__main__':
     torch.manual_seed(args.seed)
 
     if args.train:
-        shared_model = agentNET(1, 150)
+        shared_model = agentNET(1, 129)
         if args.agentload:
            saved_state = torch.load('{0}{1}_agent.dat'.format(args.load_model_dir, args.env))
            shared_model.load_state_dict(saved_state)

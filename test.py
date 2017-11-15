@@ -24,7 +24,7 @@ def test(args, shared_model):
     torch.manual_seed(args.seed)
     env = Quoridor(15)
 
-    model = agentNET(1, 150)
+    model = agentNET(1, 129)
     model.eval()
 
     start_time = time.time()
@@ -41,27 +41,15 @@ def test(args, shared_model):
         wall_time = 0
         use_wall = 0
         model.load_state_dict(shared_model.state_dict())
-        if args.gpu:
-            model = model.cuda()
-
+        p = [0, 0, 0, 0, 0, 0]
         for i in range(100):
-            if args.gpu:
-                cx = Variable(torch.zeros(1, 864).cuda())
-                hx = Variable(torch.zeros(1, 864).cuda())
-            else:
-                cx = Variable(torch.zeros(1, 864))
-                hx = Variable(torch.zeros(1, 864))
-
-            state, _ = env.reset()
+            state, _, _, _, pid = env.reset()
             state = torch.from_numpy(np.array([state, ])).float()
             
             step = 0
             before = 0
             while(True):
-                if args.gpu:
-                    value, logit, (hx, cx) = model((Variable(state.unsqueeze(0).cuda()),(hx, cx)))
-                else:
-                    value, logit, (hx, cx) = model((Variable(state.unsqueeze(0)),(hx, cx)))
+                value, logit = model((Variable(state.unsqueeze(0))))
 
                 prob = F.softmax(logit)
                 if args.gpu:
@@ -74,15 +62,16 @@ def test(args, shared_model):
                 # print(action.numpy())
                 # print(action.numpy().tolist())
                 # print(action.numpy().tolist()[0][0])
-                if(action.numpy().tolist()[0] - 1 < 128):
+                if(action.numpy().tolist()[0] < 128):
                     wall_time += 1
                 else:
                     step_time += 1
 
-                state, result = env.action(action.numpy().tolist()[0] - 1)
+                state, result, _, _ = env.action(action.numpy().tolist()[0])
                 state = torch.from_numpy(np.array([state, ])).float()
                 step += 1
                 if result == 0:
+                    p[pid] += 1
                     success_time += 1
                     reward_sum += 1
                     done = True
@@ -92,8 +81,10 @@ def test(args, shared_model):
                     done = False
                     dis0, _ = env.findPath(0)
                     dis1, _ = env.findPath(1)
-                    if (action.numpy().tolist()[0] - 1 < 128):
-                        reward_sum += float(dis1 - dis0 - before) / 20
+                    if (action.numpy().tolist()[0] < 128):
+                        ans = float(dis1 - dis0 - before) / 5
+                        if(ans > 0):
+                            reward_sum += ans
                     before = dis1 - dis0
                 elif result == 1:
                     done = True
@@ -114,14 +105,12 @@ def test(args, shared_model):
         wall_time = float(wall_time) / 100
 
         log['{}_log'.format(args.env)].info(
-                "Time {0}, success mean {1:.5f}, reward mean {2:.5f}, success step mean {3:.5f}, fail step mean {4:.5f}, step_time {5:.5f}, wall_time {6:.5f}".
+                "Time {0}, success mean {1:.5f}, reward mean {2:.5f}, success step mean {3:.5f}, fail step mean {4:.5f}, step_time {5:.5f}, wall_time {6:.5f}, win {7} {8} {9} {10} {11} {12}".
                 format(
                     time.strftime("%Hh %Mm %Ss",
                                   time.gmtime(time.time() - start_time)),
-                    success_mean, reward_mean, ave_s, ave_f, step_time, wall_time))
+                    success_mean, reward_mean, ave_s, ave_f, step_time, wall_time, p[0], p[1], p[2], p[3], p[4], p[5]))
 
-        if args.gpu:
-            model.cpu()
 
         if success_time >= max_time:
             model.load_state_dict(shared_model.state_dict())
