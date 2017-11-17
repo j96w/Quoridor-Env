@@ -46,6 +46,7 @@ class Quoridor(object):
         self.nw = Board(self.record_json)
         self.json_out = open('result' + str(self.pros) + '.json', 'w')
         self.should_reverse = turn = random.randint(0, 1)
+        # self.should_reverse = turn = 0
         self.record_json['id'] = [turn, 1 - turn]
         self.record_json['step'] = []
         self.ins = ""
@@ -136,11 +137,15 @@ class Quoridor(object):
         state = copy.deepcopy(self.state(ai))
         u = ((0, 1), (0, -1), (1, 0), (-1, 0))
         G = nx.DiGraph()
+        _G = nx.DiGraph()
         for i in range(1, self.size, 2):
             for j in range(1, self.size, 2):
                 if state[i][j] == 2:
                     pos = (i, j)
+                if state[i][j] == -2:
+                    _pos = (i, j)
                 G.add_node((i, j))
+                _G.add_node((i, j))
         for i in range(1, self.size, 2):
             for j in range(1, self.size, 2):
                 for k in range(len(u)):
@@ -148,6 +153,7 @@ class Quoridor(object):
                         continue
                     x = i + u[k][0] * 2
                     y = j + u[k][1] * 2
+                    _G.add_weighted_edges_from([((i, j), (x, y), 1)])
                     if (state[x][y] == 0 or state[x][y] == 2):
                         G.add_weighted_edges_from([((i, j), (x, y), 1)])
                     else:
@@ -158,9 +164,37 @@ class Quoridor(object):
                                 G.add_weighted_edges_from([((i, j), (x + u[kk][0] * 2, y + u[kk][1] * 2), 1)])
                         else:
                             G.add_weighted_edges_from([((i, j), (x + u[k][0] * 2, y + u[k][1] * 2), 1)])
-        return G, pos
+        return G, pos, _G, _pos
 
     def findPath(self, ai):
+        G, pos, _G, _pos = self.build_graph(ai)
+        path = nx.shortest_path(G, source = pos) 
+        dis = nx.shortest_path_length(G, source = pos)
+        min_dis = 1000
+        min_path = ()
+        for i in range(1, self.size, 2):
+            now_dis = dis.get((17, i), 1001)
+            if now_dis < min_dis or (now_dis == min_dis and random.randint(0, 4) == 0):
+                min_dis = now_dis
+                min_path = path[(17, i)][1]
+
+        if min_path == ():
+            _path = nx.shortest_path(_G, source = pos) 
+            _dis = nx.shortest_path_length(_G, source = pos)
+            for i in range(1, self.size, 2):
+                now_dis = _dis.get((17, i), 1000)
+                if now_dis < min_dis:
+                    min_dis = now_dis
+            if _dis[_pos] == 1:
+                for i in range(1, self.size, 2):
+                    for j in range(1, self.size, 2):
+                        now_dis = dis.get((i, j), 1000)
+                        if (now_dis == 1):
+                            min_path = (i, j)
+            else:
+                min_path = _path[_pos][1]
+            
+        return copy.deepcopy(min_dis), copy.deepcopy(min_path)
         G, pos = self.build_graph(ai)
         path = nx.shortest_path(G, source = pos) 
         dis = nx.shortest_path_length(G, source = pos)

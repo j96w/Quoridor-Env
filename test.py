@@ -73,26 +73,26 @@ def test(args, shared_model):
                 if result == 0:
                     p[pid] += 1
                     success_time += 1
-                    reward_sum += 1
+                    reward_sum += 5
                     done = True
                     ave_success_step += step
                     #print(state)
                 elif result == 2:
                     done = False
-                    dis0, _ = env.findPath(0)
-                    dis1, _ = env.findPath(1)
-                    if (action.numpy().tolist()[0] < 128):
-                        ans = float(dis1 - dis0 - before) / 5
-                        if(ans > 0):
-                            reward_sum += ans
-                    before = dis1 - dis0
+                    #dis0, _ = env.findPath(0)
+                    #dis1, _ = env.findPath(1)
+                    #if (action.numpy().tolist()[0] < 128):
+                    #    ans = float(dis1 - dis0 - before) / 5
+                    #    if(ans > 0):
+                    #        reward_sum += ans
+                    #before = dis1 - dis0
                 elif result == 1:
                     done = True
-                    reward_sum -= 1
+                    reward_sum -= 5
                     ave_fail_step += step
                 else:
                     done = True
-                    reward_sum -= 2
+                    reward_sum -= 10
                     ave_fail_step += step
 
                 if done:
@@ -105,7 +105,7 @@ def test(args, shared_model):
         wall_time = float(wall_time) / 100
 
         log['{}_log'.format(args.env)].info(
-                "Time {0}, success mean {1:.5f}, reward mean {2:.5f}, success step mean {3:.5f}, fail step mean {4:.5f}, step_time {5:.5f}, wall_time {6:.5f}, win {7} {8} {9} {10} {11} {12}".
+                "Time {0}, success mean {1:.5f}, reward mean {2:.5f}, success step mean {3:.5f}, fail step mean {4:.5f}, walk_time {5:.5f}, wall_time {6:.5f}, win {7} {8} {9} {10} {11} {12}".
                 format(
                     time.strftime("%Hh %Mm %Ss",
                                   time.gmtime(time.time() - start_time)),

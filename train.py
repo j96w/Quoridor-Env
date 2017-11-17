@@ -64,23 +64,23 @@ def train(rank, args, shared_model, optimizer):
                 opp_data.append(copy.deepcopy([opp_state, opp_action]))
 
             if result == 0:
-                reward = 1
+                reward = 5
                 done = True
             elif result == 2:
                 dis0, _ = env.findPath(0)
                 dis1, _ = env.findPath(1)
                 reward = 0
-                if (action.numpy().tolist()[0][0] < 128):
-                    ans = float(dis1 - dis0 - before) / 5
-                    if(ans > 0):
-                        reward += ans
-                before = dis1 - dis0
+                #if (action.numpy().tolist()[0][0] < 128):
+                #    ans = float(dis1 - dis0 - before) / 5
+                #    if(ans > 0):
+                #        reward += ans
+                #before = dis1 - dis0
                 done = False
             elif result == 1:
-                reward = -1
+                reward = -5
                 done = True
             else:
-                reward = -2
+                reward = -10
                 done = True
 
             values.append(value)
@@ -122,7 +122,7 @@ def train(rank, args, shared_model, optimizer):
         optimizer.step()
 
         count = 0
-        for step in range(args.num_steps):
+        if count == 5:
             inputs = []
             labels = []
             optimizer.zero_grad()
